@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import {useDispatch} from "react-redux" ;
 import {addToCart, totalAmount} from "../redux/shop/cartReducerSlice"
+import Link from 'next/link';
 
 function SingleItem(props) {
   const dispatch = useDispatch();
@@ -17,8 +18,7 @@ function SingleItem(props) {
           <div className='card-body fw-bold'>
             <div className='card-title  text-600 me-2 text-truncate'><strong>{props.item.title}</strong></div>
             <span>${props.item.price}</span>
-          </div>
-          <button onClick={() => onAddtoCartHandler(props.item)} className="btn btn-warning">Add To Cart</button>
+          </div><Link href={`/product/${encodeURIComponent(props.item.id)}`}><a className="stretched-link" ></a></Link>
         </div>
 
   )
