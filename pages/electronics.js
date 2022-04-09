@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SingleItem from "../components/SingleItem";
 
 export async function getServerSideProps() {

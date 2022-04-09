@@ -1,32 +1,11 @@
-import { useRouter } from 'next/router'
 import Image from "next/image";
-import SingleItem from '../../components/SingleItem';
-//import SingleItem from '../components/SingleItem';
 
-export const Cat = () => {
-    const router = useRouter()
-    const { catagory } = router.query
-
-    
-
-
-
-
-
-    return (
-
-        {catagory}
-    ) ;
-}
-
-
-
-export async function getServerSideProps({params}) {
+export async function getServerSideProps() {
     // Instead of the file system,
     // fetch post data from an external API endpoint 
     
     
-    const base_url = `https://fakestoreapi.com/products/category/${params.catagory}`;
+    const base_url = 'https://fakestoreapi.com/products?limit=12';
     const res = await fetch(base_url)
     const data = await res.json()
    console.log(base_url);
@@ -52,7 +31,7 @@ const Post = ({ data }) => {
 
     return (
         <div>
-            <section className="py-5">
+            <section className="py-5 bg-sec">
                 <div className="container ">
                     <div className="row ">
                         <div className="col-lg-7 mx-auto text-center mt-7 mb-5">
@@ -65,7 +44,14 @@ const Post = ({ data }) => {
                                         <div className="row h-100 align-items-center g-2">
                                             {results.map((item) => (
 
-                                            <SingleItem item={item} key={item}></SingleItem>
+                                                <div className='card col-md-3 m-0 px-1 mx-00 hover' key={item.id}>
+                                                    <Image className='img-fluid py-2' src={item.image} alt="..." width="100%" height={250} objectFit='contain' />
+                                                    <div className='card-body fw-bold'>
+                                                        <div className='card-title  text-600 text-truncate me-2'><strong>{item.title}</strong></div>
+                                                        <span>${item.price}</span>
+                                                    </div>
+                                                    <button onClick={() => onAddtoCartHandler(item)} className="btn btn-warning">Add To Cart</button>
+                                                </div>
                                             ))}
                                         </div>
                                     </div>
