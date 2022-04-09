@@ -1,11 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { useSelector } from 'react-redux'
 import Cart from '../components/Cart'
-import Decrement from '../components/decrement'
-import Increment from '../components/Increment'
 import Products from '../components/Products'
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
       const count = useSelector((state) => state.counter.value);
