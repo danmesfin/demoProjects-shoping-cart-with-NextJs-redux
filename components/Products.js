@@ -20,6 +20,7 @@ function Products() {
         <div className="container ">
           <div className="row ">
             <div className="col-lg-7 mx-auto text-center mt-7 mb-5">
+              <hr></hr>
               <h5 className="fw-bold fs-3 fs-lg-5 lh-sm">Best Deals</h5>
             </div>
             <div className="col-12">

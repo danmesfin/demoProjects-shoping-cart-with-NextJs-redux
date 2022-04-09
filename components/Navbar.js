@@ -16,10 +16,10 @@ export default function Navbar() {
       <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
       <div className="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <li className="nav-item px-2 text-white"><Link className="nav-link fw-medium active" aria-current="page" href="#categoryWomen">Women</Link></li>
-          <li className="nav-item px-2 text-white"><Link className="nav-link fw-medium" href="/men">Men</Link></li>
-          <li className="nav-item px-2 text-white"><Link className="nav-link fw-medium" href="/collection">Collection</Link></li>
-          <li className="nav-item px-2 text-white"><Link className="nav-link fw-medium" href="/jewelery">Jewelery</Link></li>
+          <li className="nav-item px-2 text-white"><Link className="nav-link fw-medium active" aria-current="page" href="/catagory/Women">Women</Link></li>
+          <li className="nav-item px-2 text-white"><Link className="nav-link fw-medium" href="/catagory/men">Men</Link></li>
+          <li className="nav-item px-2 text-white"><Link className="nav-link fw-medium" href="/catagory/collection">Collection</Link></li>
+          <li className="nav-item px-2 text-white"><Link className="nav-link fw-medium" href="/catagory/jewelery">Jewelery</Link></li>
         </ul>
         <form>
        <Link href="/mycart"><a className="text-1000" >

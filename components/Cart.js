@@ -41,7 +41,7 @@ export default function Cart() {
 
   return (
 
-    <div className='conatainer m-2 p-3 bg-sec shadow'>
+    <div className='container  m-2 px-3 bg-sec shadow  '>
       {console.log(myCart)}
       {console.log(totalPrice)}
      
@@ -70,8 +70,11 @@ export default function Cart() {
      ))
     }
     <tr>
+      <td></td>
+      <td></td>
       <td><b>Subtotal</b> : ${totalPrice}</td>
-      <td><button className='btn btn-success' onClick={() => dispatch(checkout())}>Check Out</button></td>
+      <td></td>
+      <td><button className='btn btn-success' ><Link href={'/CheckOut'}>Check Out</Link></button></td>
     </tr>
   </tbody>
 </table>
